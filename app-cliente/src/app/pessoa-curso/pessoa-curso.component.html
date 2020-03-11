@@ -1,0 +1,25 @@
+<div class="container>">
+  <br />
+  <h2>Cursos/Matrículas</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Matricula</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let curso of cursos">
+        <td>{{ curso.Id }}</td>
+        <td>{{ curso.Nome }}</td>
+        <td>{{ curso.Matricula }}</td>
+        <td>
+          <button class="btn btn-success" (click)="matricular(curso)">Matricular</button>
+          <button class="btn btn-danger" (click)="finalizar(curso)">Finalizar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-secondary" (click)="cancelar()">Cancelar</button>
+</div>

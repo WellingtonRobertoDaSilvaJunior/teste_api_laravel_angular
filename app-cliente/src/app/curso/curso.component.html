@@ -1,0 +1,18 @@
+<div class="container>">
+  <br />
+  <h2>Cursos Cadastrados</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nome</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let curso of cursos">
+        <td>{{ curso.Id }}</td>
+        <td>{{ curso.Nome }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,27 @@
+<div class="container>">
+  <br />
+  <h2>Pessoas Cadastradas</h2>
+  <button class="btn btn-primary" (click)="addPessoa()">Cadastrar</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>CPF</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pessoa of pessoas">
+        <td>{{ pessoa.Id }}</td>
+        <td>{{ pessoa.Nome }}</td>
+        <td>{{ pessoa.Telefone }}</td>
+        <td>{{ pessoa.CPF }}</td>
+        <td>
+          <button (click)="editPessoa(pessoa)" class="btn btn-primary">Alterar</button>
+          <button (click)="deletePessoa(pessoa)" class="btn btn-danger">Deletar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
